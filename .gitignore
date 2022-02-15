@@ -1,0 +1,12 @@
+node_modules
+.vscode
+package-lock.json
+MIIS_AI.code-workspace
+test.json
+dist
+src/assets/img/unuse
+public/img/unuse
+log.json
+MIIS_AI
+src/saveEX.json
+.scannerwork

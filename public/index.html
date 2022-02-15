@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>數位病理玻片瀏覽暨標註系統</title>
+  <link rel="icon" href="img\favicon.ico">
+  <link rel="stylesheet" type="text/css" href="css/base.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <div class="main">
+    <div class="confirm">
+      <div class="confirmBox">
+        <div>
+          <div id="confirmMessage">
+            <div id="mainMessage">
+
+            </div>
+            <div id="secondMessage"></div>
+          </div>
+          <div>
+            <button id="confirmYes" type="button" value="Yes">是</button>
+            <button id="confirmNo" type="button" value="No">否</button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <noscript>
+      <strong>非常抱歉!本頁面必須要啟用JavaScript才能運作，請啟用後重新整理後繼續使用，造成您的不便非常抱歉</strong>
+    </noscript>
+    <div id="app"></div>
+  </div>
+  <script>
+    const ui = {
+      confirm: async (message, secmess = null, yesbtn = "是", nobtn = "否") => createConfirm(message, secmess, yesbtn, nobtn),
+      alert: async (message, secmess = null, yesbtn = "確定", nobtn = null) => createAlert(message, secmess, yesbtn, nobtn),
+    }
+
+    const createConfirm = (message, secmess, yesbtn, nobtn) => {
+      return new Promise((complete, failed) => {
+
+        $('#confirmNo').show();
+        $('#secondMessage').html(secmess);
+        $('#mainMessage').html(message);
+        $('#confirmYes').text(yesbtn);
+        $('#confirmNo').text(nobtn);
+
+        $('#confirmYes').off('click');
+        $('#confirmNo').off('click');
+
+        $('#confirmYes').on('click', () => { $('.confirm').hide(); complete(true); });
+        $('#confirmNo').on('click', () => { $('.confirm').hide(); complete(false); });
+
+        $('.confirm').show();
+      });
+    }
+    const createAlert = (message, secmess, yesbtn, nobtn) => {
+      return new Promise((complete, failed) => {
+
+
+        $('#secondMessage').text(secmess);
+        $('#mainMessage').text(message);
+        $('#confirmYes').text(yesbtn);
+        $('#confirmNo').hide();
+
+        $('#confirmYes').off('click');
+        $('#confirmNo').off('click');
+
+        $('#confirmYes').on('click', () => { $('.confirm').hide(); complete(true); });
+        $('#confirmNo').on('click', () => { $('.confirm').hide(); complete(false); });
+
+        $('.confirm').show();
+      });
+    }
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/semantic.min.js" charset="utf-8"></script>
+</body>
+
+</html>

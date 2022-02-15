@@ -1,0 +1,73 @@
+html {
+    background-color: #5e5e5e;
+}
+
+/* body{
+	overflow-y: block;
+	overflow-x: block;
+} */
+
+.case iframe {
+    width: 98.8vw;
+    height: 97.5vh;
+    border: 0px;
+    background-color: transparent;
+}
+
+.filename:not(.Casefilename) {
+    font-size: 1.1rem;
+    color: #dadada;
+    text-align: center;
+    vertical-align: middle;
+    height: 1.8rem;
+    width: 19.5rem;
+    position: absolute;
+    top: 1.05rem;
+    right: 5rem;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: #454545;
+    opacity: 0.66;
+}
+.Casefilename{
+font-size: 0.8rem;
+    color: #88E4FC;
+    text-align: center;
+    vertical-align: middle;
+    /* width: 19.5rem; */
+    position: absolute;
+    padding: 0.2rem 1rem 0.2rem 1rem;
+    top: 0.5rem;
+    right: 5rem;
+    border: none;
+    border-radius: 0.5rem;
+    background-color:#0F1041;
+    /* opacity: 0.66; */
+}
+
+.backList {
+    height: 2.5rem;
+    width: 2.5rem;
+    border: none;
+    opacity: 0.66;
+    position:absolute;
+    bottom: 2vmin;
+    right: 4.2vmin;
+}
+
+.backList input[type=button]{
+    font-size: 3vmin;
+    height: 100%;
+    width: 100%;
+	border: none;
+    border-radius: 0.5rem;
+	background-image: url(../img/icon/logout.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+    background-color: #454545;
+}
+#painter{
+    height: 100vh;
+    width: 100vw;
+}

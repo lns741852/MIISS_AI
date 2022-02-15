@@ -1,0 +1,191 @@
+html {
+	font-size: 2.5vmin;
+	font-family: '微軟正黑體',Arial,'ArialUnicodeMS';
+    background-color: #323232;
+}
+
+input[name="current-tool-mode"]+label {
+    font-size: 1.5rem;
+    color: gainsboro;
+}
+
+input[name="current-tool-mode"]:checked+label {
+    font-size: 1.5rem;
+    color: grey;
+}
+
+input[name="current-tool-mode"] {
+    display: none;
+}
+
+body::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+/*滾動條裡面小方塊樣式*/
+
+body::-webkit-scrollbar-thumb {
+    border-radius: 100px;
+    --webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    background: #131313;
+}
+
+/*滾動條裡面軌道樣式*/
+
+body::-webkit-scrollbar-track {
+    --webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 0;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.painter-toolbar {
+    list-style-type: none;
+    margin: 0.5rem 0 0 0;
+    padding: 0;
+    height: 1.5rem;
+}
+
+.painter-toolbar li {
+    float: left;
+    margin: 0 0.5rem 0 0;
+    width: 2rem;
+    text-align: center;
+}
+
+.painter-toolbar label {
+    cursor: pointer;
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    -o-appearance: button;
+    -ms-appearance: button;
+    appearance: button;
+}
+
+.painter-toolbar li:hover {
+    background: whitesmoke;
+}
+
+.main{
+    height: 101vh;
+}
+
+.menu {
+    height: 2.5rem;
+    width: 2.5rem;
+    position: fixed ! important;
+    top: 0.5rem;
+    right: 0.8rem;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: #454545;
+    opacity: 0.66;
+    z-index: 9999;
+}
+
+.menu button[type=button] {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #dadada;
+    height: 100%;
+    width: 100%;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: transparent;
+}
+
+.menu button[type=button]:active {
+    color: #cbcbcb;
+    background-color: #232323;
+}
+
+.toolbar {
+    display: none;
+    height: 33.2rem;
+    width: 2.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    position: fixed ! important;
+    top: 3.35rem;
+    right: 0.8rem;
+    background-color: #454545;
+    opacity: 0.66;
+    z-index: 9999;
+}
+
+.toolbar table tbody tr td {
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 0.5rem;
+}
+
+.toolbar button[type=button] {
+    font-size: 1.5rem;
+    color: #dadada;
+    height: 100%;
+    width: 100%;
+    border: none;
+    background-color: transparent;
+}
+
+.toolbar button[type=button]:active {
+    background-color: #232323;
+}
+
+.toolbar #top {
+    position: absolute;
+    top: 0.5rem;
+}
+
+.toolbar #bottom {
+    position: absolute;
+    bottom: 0.5rem;
+}
+
+.edit {
+    display: none;
+    height: 5.5rem;
+    width: 12.5rem;
+    position: fixed ! important;
+    top: 3.5rem;
+    right: 3.75rem;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: #454545;
+    z-index: 9999;
+}
+
+.square {
+    display: none;
+    height: 4rem;
+    width: 9.5rem;
+    position: fixed ! important;
+    top: 6.5rem;
+    right: 3.75rem;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: #454545;
+    z-index: 9999;
+}
+
+.zoom {
+    display: none;
+    height: 5.5rem;
+    width: 9.5rem;
+    position: fixed ! important;
+    top: 6rem;
+    right: 2.75rem;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: #454545;
+    z-index: 9999;
+}
+
+.zoom table {
+    font-size: 1.5rem;
+    color: #dadada;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    border: none;
+}

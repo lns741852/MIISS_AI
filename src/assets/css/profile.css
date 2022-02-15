@@ -1,0 +1,307 @@
+html {
+    color: #b0c4ff;
+    /* background-color: #5e5e5e; */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../img/BG/listMainBG.png);
+    background-color: #DDD;
+    background-size: 100vw auto;
+}
+.EditProfile,.RetrievePW,.ClassEdit{
+  height: 100vh;
+  width: 100vw;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(../img/BG/loginBG3.png);
+  background-size: cover;
+}
+.user {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+}
+
+.user label {
+    font-size: 0.7rem;
+}
+
+.user img {
+    height: 3rem;
+    width: 3rem;
+    cursor: pointer;
+}
+
+.user_online {
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    background: rgb(8, 226, 0);
+    border-radius: 50%;
+}
+
+.user_logout_function {
+    background: #193474;
+    padding: .5rem;
+    padding-bottom: 0.25rem;
+    border: #9bb2f9 solid 2px;
+    display: flexbox;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 5px;
+    top: 3.5rem;
+    display: none
+}
+
+.user_logout_function_d {
+    font-size: .7rem;
+    padding-bottom: 0.25rem;
+    cursor: pointer;
+}
+
+.user_logout_function_d:not(:first-child) {
+    padding-top: 0.25rem;
+    border-top: solid #9bb2f9 1px;
+}
+
+.user_logout_function :first .user_logout_function_d {
+    padding-bottom: 0.5rem;
+    border-bottom: #9bb2f9 solid 1px
+}
+
+.EditProfile_listborder,.RetrievePW_listborder {
+    height: 85vh;
+    width: 50vw;
+    text-align: center;
+    display: flex;
+    align-items: center;
+justify-content: center;
+    position: absolute;
+    top: 5rem;
+    /* right: 8.8rem; */
+     left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+    background-image: url(/img/BG/listBG.png);
+    background-size: 50vw 85vh ;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+.RetrievePW_listborder{
+    background-size: 50vw 80vh ;
+}
+.ClassEdit .EditProfile_listborder{
+    height: 70vh;
+    background-size: 50vw 70vh ;
+}
+.input_div{
+  margin: 10px 0 10px 0;
+}
+.listborder_title{
+    font-size: 1.5rem;
+    color: #88E4FC;
+    margin-bottom: 2rem;
+}
+.EditProfile_listborder label:not(#pass_cansee_img){
+    line-height: 1rem;
+    display: block;
+    font-size: 0.8rem;
+    text-align: left;
+}
+.EditProfile_listborder input:not(.color_selector),.EditProfile_listborder select{
+    box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+    background: transparent;
+    width: 100%;
+    height: 1.2rem;
+    border: #9bb2f9 solid 1.5px;
+    border-radius: 5px;
+    color: #DDD;
+font-size: 0.8rem;
+
+}
+.EditProfile_listborder select option{
+    color: #88E4FC;
+    font-size: 0.8rem;
+    background: #0f0f41;
+
+}
+.input_div_pass input[type="checkbox"][id^="pass_cansee"] {
+  display: none;
+}
+.input_div small{
+color:firebrick;
+font-size: 0.3rem;
+
+}
+.input_div_pass{
+position: relative;
+}
+#pass_cansee_img{
+        position: absolute;
+    right: .3rem;
+    z-index: 999;
+    cursor: pointer;
+}
+.btn_bg_boder{
+width: 4rem;
+height: 2rem;
+color: #DDD;
+font-size: 0.9rem;
+    border: none;
+    background: transparent;
+
+
+  /* box-shadow:inset 20px 20px 20px #0f0f42; */
+    /* background-image: url('/MIIS_AI/src/assets/img/icon/btn_border.png'); */
+    background-image: url(/img/icon/btn_boder.png);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: 4rem 2rem;
+cursor: pointer;
+margin: 0 0.5rem 0 0.5rem;
+}
+.forget_pass_lay2{
+    display: none;
+}
+
+.ClassEdit .color_select_box{
+    position: absolute;
+    justify-content: center;
+text-align: left;
+     background: rgba(2, 2, 43,0.6);
+    border-radius: 10px;
+    font-size: 0.7rem;
+    bottom: 4rem;
+    right: 3rem;
+    border: #88E4FC 1.5px solid;
+     display: none;
+    padding: 0.5rem;
+}
+/* .color_select_box_form{
+    margin: 0.5rem;
+} */
+.color_selector[type="radio"]{
+    -webkit-appearance: none;
+    vertical-align:middle;
+    margin-top:0;
+    border:none;
+height: 0.6rem;width: 0.6rem;;
+margin: 5px 3px 5px 3px;
+    /* min-height: 12px;
+    min-width: 12px; */
+}
+
+.color_selector[type="radio"]:checked::after{
+    content: '';
+     position: absolute;
+    background: transparent;
+    height: 0.6rem;
+    width:  0.6rem;
+outline:#88E4FC solid 2px;
+}
+
+.color_selector[type="radio"]:disabled::after{
+   content: '';
+    position: absolute;
+    background: linear-gradient(45deg, rgba(119, 119, 119, 0) 45.5%, #cdf2f5 45.5%,  rgba(119,119,119, 0.575) 55.5%);
+    /* border: #88E4FC solid 2px; */
+    border-top: none;
+    border-right: none;
+
+     height: 0.6rem;
+    width: 0.6rem;
+
+}
+ .color_selector:focus-within,.Class_table td {
+outline:none;
+ }
+ .Class_color{
+    /* background: #F00; */
+    width: 1.1rem;
+    height: 1.1rem;
+ }
+ .Class_table table,.Class_table{
+     width: 100%;
+
+ }
+ .Class_table thead{
+     display: none;
+ }
+ .Class_table .VueTables__row td:first-child {
+     width: 8%;
+ }
+  .Class_table .VueTables__row td:nth-child(2){
+      width: 70%;
+  }
+ .Class_table tr{
+         vertical-align: bottom;
+         width: 100%;
+        height: 2rem;
+            text-align:left;
+ }
+ .Class_table_new{
+     display: none;
+ }
+ .new_class_btn{
+     border: #88E4FC 1.5px solid !important;
+     border-radius: 5px;
+     color: #88E4FC;
+     font-size: .7rem;
+     padding: 0 0.5rem 0 0.5rem;
+ }
+.used_button{
+    background-color: #172E73 !important;
+}
+
+ .edit_color{
+     margin-left:0.5rem;
+     cursor: pointer;
+     border: #88E4FC 2px solid;
+ }
+.tran_btn{
+    border: none;background: transparent;
+    display: flex;
+     align-items: center;
+     justify-content: center;
+     cursor: pointer;
+}
+.tran_btn:focus-within{
+outline:none;
+}
+.back_btn{
+
+     position: absolute;
+     bottom: 1rem;
+     right: 1rem;
+}
+
+.Class_table input:read-only {
+outline:none;
+border: none;
+font-size: 2.5vmin
+ }
+.Class_table input:focus-within,button {
+outline:none;
+ }
+input:-internal-autofill-selected,
+input:-internal-autofill-previewed,
+input:-webkit-autofill {
+
+    -webkit-text-fill-background-color:transparent !important;
+    background-image: none !important;
+    color: #FFF !important;
+    outline: none;
+       transition: 5000s ease-out 0s;
+  -webkit-text-fill-color: #FFF;
+}
+.EditProfile_listborder input::placeholder {
+    color: #9bb2f9;
+    font-size: 0.6rem;
+    opacity: 0.6;
+}
